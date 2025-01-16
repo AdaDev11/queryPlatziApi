@@ -10,6 +10,14 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
+export interface Product {
+    id: number; // Har bir mahsulot uchun noyob identifikator
+    title: string; // Mahsulot nomi
+    description: string; // Mahsulotning ta'rifi
+    price: number; // Mahsulot narxi
+    images: string[]; // Rasmlar massiv ko‘rinishida
+}
+
 const fetchProducts = async () => {
     const res = await axios.get("https://api.escuelajs.co/api/v1/products");
     return res.data;
@@ -39,7 +47,7 @@ const Product = () => {
                     padding: "20px",
                 }}
             >
-                {data.map((product) => (
+                {data.map((product: Product) => (
                     <Card key={product.id} sx={{ maxWidth: "100%" }}>
                         <CardMedia
                             component="img"
