@@ -11,11 +11,11 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 export interface Product {
-    id: number; // Har bir mahsulot uchun noyob identifikator
-    title: string; // Mahsulot nomi
-    description: string; // Mahsulotning ta'rifi
-    price: number; // Mahsulot narxi
-    images: string[]; // Rasmlar massiv ko‘rinishida
+    id: number;
+    title: string;
+    description: string;
+    price: number;
+    images: string[];
 }
 
 const fetchProducts = async () => {
