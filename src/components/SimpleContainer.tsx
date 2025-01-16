@@ -12,8 +12,6 @@ import Typography from "@mui/material/Typography";
 
 const fetchProducts = async () => {
     const res = await axios.get("https://api.escuelajs.co/api/v1/products");
-    const products = res.data;
-    console.log(products.map((i) => i.title));
     return res.data;
 };
 
